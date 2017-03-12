@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>y-table</title>
+<link rel="stylesheet" href="css/yTable.css" />
+</head>
+<body>
+<div class="y-table">
+	<!--<div class="y-table-header">
+		<div class="y-table-header-item" data-index="0">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期</div>
+		<div class="y-table-header-item" data-index="1">
+			<div class="y-table-filter-container">
+				<input value="" />
+				<ul class="y-table-filter">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+		</div>
+		<div class="y-table-header-item" data-index="2">xxxx</div>
+	</div>
+	<div class="y-table-body">
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">4</div>
+			<div class="y-table-body-item" data-index="1">s</div>
+			<div class="y-table-body-item" data-index="2">fd</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">5</div>
+			<div class="y-table-body-item" data-index="1">x</div>
+			<div class="y-table-body-item" data-index="2">a</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">6</div>
+			<div class="y-table-body-item" data-index="1">x</div>
+			<div class="y-table-body-item" data-index="2">t</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">7</div>
+			<div class="y-table-body-item" data-index="1">x</div>
+			<div class="y-table-body-item" data-index="2">e</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">8</div>
+			<div class="y-table-body-item" data-index="1">e</div>
+			<div class="y-table-body-item" data-index="2">x</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">9</div>
+			<div class="y-table-body-item" data-index="1">e</div>
+			<div class="y-table-body-item" data-index="2">a</div>
+		</div>
+		<div class="row">
+			<div class="y-table-body-item" data-index="0">10</div>
+			<div class="y-table-body-item" data-index="1">t</div>
+			<div class="y-table-body-item" data-index="2">j</div>
+		</div>
+	</div>-->
+</div>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/yTable.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		var data = {
+			column: [{
+				text: "h1"
+			}, {
+				filter: true,
+				text: "h2"
+			}, {
+				filter: true,
+				text: "h3"
+			}],
+			data: [[1, 2, 3],[3, 2, 1],[4, 5, 6],[6, 7, 8],[4, 7, 1]]
+		}
+		//用法实例
+		var config={
+		    
+		};
+		//先初始化参数配置，在执行各个主体函数，函数中可以调用config的变量，其实就是jquery的链式操作
+		var yTable = $('.y-table').yTable(config);
+		yTable.yTable('updateTable', data);
+	});
+</script>
+</body>
+</html>
